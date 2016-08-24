@@ -1,0 +1,10 @@
+title = "Config File"
+
+[database]
+name = "example_dev"
+host = "localhost"
+user = "postgres"
+password = ""
+
+[server]
+port = "8080"
