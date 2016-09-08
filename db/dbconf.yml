@@ -1,0 +1,7 @@
+test:
+  driver: postgres
+  open: user=postgres dbname=streamline_test sslmode=disable
+
+development:
+  driver: postgres
+  open: user=postgres dbname=streamline_dev sslmode=disable

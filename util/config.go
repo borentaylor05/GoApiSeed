@@ -20,7 +20,9 @@ type database struct {
 }
 
 type server struct {
-	Port string
+	Port       string
+	GinMode    string
+	HmacSecret string
 }
 
 func ReadConfig() (Config, error) {

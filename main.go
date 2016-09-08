@@ -1,16 +1,7 @@
 package main
 
-import (
-	"GoApiSeed/db"
-	"GoApiSeed/server"
-	"fmt"
-)
+import "github.com/borentaylor05/streamline/server"
 
 func main() {
-	db, err := db.Open()
-	defer db.Close()
-	if err != nil {
-		fmt.Println(err)
-	}
 	server.Init()
 }

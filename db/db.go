@@ -1,13 +1,13 @@
 package db
 
 import (
-	"GoApiSeed/util"
-
 	"github.com/jinzhu/gorm"
+
+	"github.com/borentaylor05/streamline/util"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
-func Open() (*gorm.DB, error) {
+func OpenDB() (*gorm.DB, error) {
 	config, err := util.ReadConfig()
 	if err != nil {
 		return nil, err
@@ -18,6 +18,7 @@ func Open() (*gorm.DB, error) {
 	sslmode := " sslmode=disable"
 	password := " password=" + config.DB.Password
 	db, err := gorm.Open("postgres", host+user+dbname+sslmode+password)
+
 	if err != nil {
 		return nil, err
 	}
